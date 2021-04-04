@@ -14,7 +14,9 @@ import javax.swing.event.DocumentListener;
 
 import br.edu.insper.desagil.joice.model.Calculadora;
 
-public class View extends JPanel implements ActionListener, DocumentListener {
+public class View extends JPanel implements ActionListener, DocumentListener 
+{
+	
 	private static final long serialVersionUID = 1L;
 
 	private Calculadora calculadora;
@@ -25,7 +27,8 @@ public class View extends JPanel implements ActionListener, DocumentListener {
 	private JTextField fieldRaio;
 	private JLabel fieldDensidade;
 
-	public View() {
+	public View() 
+	{
 		super();
 
 		this.comboBox = new JComboBox<>();
@@ -91,19 +94,24 @@ public class View extends JPanel implements ActionListener, DocumentListener {
 		atualizaCalculadora();
 	}
 
-	private void atualizaDensidade() {
+	private void atualizaDensidade() 
+	{
 		String text;
-		try {
+		try 
+		{
 			double peso = Double.parseDouble(this.fieldPeso.getText());
 			double raio = Double.parseDouble(this.fieldRaio.getText());
 			text = Double.toString(this.calculadora.calcula(peso, raio));
-		} catch (NumberFormatException exception) {
+		} 
+		catch (NumberFormatException exception) 
+		{
 			text = "?";
 		}
 		this.fieldDensidade.setText(text);
 	}
 
-	private void atualizaCalculadora() {
+	private void atualizaCalculadora() 
+	{
 		CalculadoraView view = (CalculadoraView) this.comboBox.getSelectedItem();
 		this.calculadora = view.getCalculadora();
 		this.imageView.updateImage(view.getNomeImagem());
@@ -112,22 +120,27 @@ public class View extends JPanel implements ActionListener, DocumentListener {
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent event) {
+	public void actionPerformed(ActionEvent event) 
+	{
 		atualizaCalculadora();
 	}
 
 	@Override
-	public void insertUpdate(DocumentEvent event) {
+	public void insertUpdate(DocumentEvent event) 
+	{
 		atualizaDensidade();
 	}
 
 	@Override
-	public void removeUpdate(DocumentEvent event) {
+	public void removeUpdate(DocumentEvent event) 
+	{
 		atualizaDensidade();
 	}
 
 	@Override
-	public void changedUpdate(DocumentEvent event) {
+	public void changedUpdate(DocumentEvent event) 
+	{
 		atualizaDensidade();
 	}
+	
 }
