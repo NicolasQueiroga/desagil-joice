@@ -7,18 +7,18 @@ import org.junit.jupiter.api.Test;
 
 class CalculadoraCFCTest 
 {
-	private CalculadoraCCC CFC;
+	private CalculadoraCFC cfc;
 	
 	@BeforeEach
 	public void init()
 	{
-		CFC = new CalculadoraCCC();
+		cfc = new CalculadoraCFC();
 	}
 	
 	@Test
 	public void densidadeCobre() 
 	{
-		double densidade = CFC.calcula(63.55, 0.128);
+		double densidade = cfc.calcula(63.55, 0.128);
 		double expected = 8.89;
 		assertEquals(expected, densidade, 0.05);
 		
@@ -27,7 +27,7 @@ class CalculadoraCFCTest
 	@Test
 	public void densidadeOuro() 
 	{
-		double densidade = CFC.calcula(196.97, 0.144);
+		double densidade = cfc.calcula(196.97, 0.144);
 		double expected = 19.36;
 		assertEquals(expected, densidade, 0.05);
 	}
@@ -35,7 +35,7 @@ class CalculadoraCFCTest
 	@Test
 	public void densidadePrata() 
 	{
-		double densidade = CFC.calcula(107.87, 0.144);
+		double densidade = cfc.calcula(107.87, 0.144);
 		double expected = 10.60;
 		assertEquals(expected, densidade, 0.05);
 	}

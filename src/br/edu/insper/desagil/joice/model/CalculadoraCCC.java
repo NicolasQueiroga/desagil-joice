@@ -5,7 +5,7 @@ public class CalculadoraCCC extends Calculadora
 
 	public CalculadoraCCC() 
 	{
-		super("Cubica de Corpo Centrado");
+		super("Cúbica de Corpo Centrado");
 	}
 
 	@Override

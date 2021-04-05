@@ -7,18 +7,18 @@ import org.junit.jupiter.api.Test;
 
 class CalculadoraCCCTest 
 {
-	private CalculadoraCCC calc;
+	private CalculadoraCCC ccc;
 	
 	@BeforeEach
 	public void init()
 	{
-		calc = new CalculadoraCCC();
+		ccc = new CalculadoraCCC();
 	}
 	
 	@Test
 	public void densidadeNiobio() 
 	{
-		double densidade = calc.calcula(92.91, 0.143);
+		double densidade = ccc.calcula(92.91, 0.143);
 		double expected = 8.57;
 		assertEquals(expected, densidade, 0.05);
 		
@@ -27,7 +27,7 @@ class CalculadoraCCCTest
 	@Test
 	public void densidadeTungstenio() 
 	{
-		double densidade = calc.calcula(183.84, 0.137);
+		double densidade = ccc.calcula(183.84, 0.137);
 		double expected = 19.28;
 		assertEquals(expected, densidade, 0.05);
 	}
@@ -35,7 +35,7 @@ class CalculadoraCCCTest
 	@Test
 	public void densidadeLitio() 
 	{
-		double densidade = calc.calcula(6.94, 0.152);
+		double densidade = ccc.calcula(6.94, 0.152);
 		double expected = 0.53;
 		assertEquals(expected, densidade, 0.05);
 	}
