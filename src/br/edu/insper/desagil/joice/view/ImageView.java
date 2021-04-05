@@ -7,7 +7,9 @@ import java.net.URL;
 
 import javax.swing.JPanel;
 
-public class ImageView extends JPanel {
+public class ImageView extends JPanel 
+{
+	
 	private static final long serialVersionUID = 1L;
 
 	private static int WIDTH = 266;
@@ -15,20 +17,24 @@ public class ImageView extends JPanel {
 
 	private Image image;
 
-	public ImageView() {
+	public ImageView() 
+	{
 		super();
 		this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
 	}
 
-	public void updateImage(String name) {
+	public void updateImage(String name) 
+	{
 		URL url = getClass().getClassLoader().getResource(name + ".png");
 		this.image = getToolkit().getImage(url);
 	}
 
 	@Override
-	public void paintComponent(Graphics g) {
+	public void paintComponent(Graphics g) 
+	{
 		super.paintComponent(g);
 		g.drawImage(this.image, 0, 0, WIDTH, HEIGHT, this);
 		getToolkit().sync();
 	}
+	
 }
