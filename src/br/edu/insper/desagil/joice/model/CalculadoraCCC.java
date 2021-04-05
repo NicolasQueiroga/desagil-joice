@@ -3,9 +3,9 @@ package br.edu.insper.desagil.joice.model;
 public class CalculadoraCCC extends Calculadora 
 {
 
-	public CalculadoraCCC(String nome) 
+	public CalculadoraCCC() 
 	{
-		super(nome);
+		super("Cubica de Corpo Centrado");
 	}
 
 	@Override
